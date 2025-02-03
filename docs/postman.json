@@ -1,0 +1,91 @@
+{
+  "info": {
+    "_postman_id": "8d7f7c2c-ec8c-42ea-bdf0-f488a58f7101",
+    "name": "Proposal API",
+    "description": "Collection for testing Proposal creation, update, and versioning.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Proposal",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\": \"My First Proposal\", \"description\": \"This is a detailed description of the first proposal.\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/proposal",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "proposal"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Proposal",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"proposalId\": \"<proposalIdHere>\", \"title\": \"Updated Proposal Title\", \"description\": \"Updated description of the proposal.\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/proposal/update",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "proposal",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "View Proposal History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/proposal/history/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "proposal",
+            "history",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
